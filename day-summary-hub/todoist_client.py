@@ -7,8 +7,8 @@ class TodoistClient:
     """Wrapper around :class:`TodoistAPI` with basic retry handling."""
 
     def __init__(self) -> None:
-        token: str = get_env("TODOIST_API_TOKEN")
-        self.api: TodoistAPI = TodoistAPI(token)
+        token = get_env("TODOIST_API_TOKEN")
+        self.api = TodoistAPI(token)
 
     def add_task(self, task: str) -> bool:
         """Return ``True`` on success, ``False`` on any failure."""

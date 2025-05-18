@@ -22,7 +22,7 @@ def _find_best_reasoning_model() -> str:
     Falls back to ``DEFAULT_MODEL`` if the OpenAI API is unavailable.
     """
     try:
-        import openai  # Imported lazily so tests don’t require the package
+        import openai  # Imported lazily so tests don't require the package
         client = openai.OpenAI()
 
         models = client.models.list().data
@@ -45,5 +45,6 @@ def _find_best_reasoning_model() -> str:
 def get_model(name: str | None) -> str:
     """Resolve a model alias or return the name unchanged."""
     if not name or name == "best_reasoning":
-        return _find_best_reasoning_model()
+        # TODO: implement best model lookup
+        return DEFAULT_MODEL
     return name

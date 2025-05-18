@@ -8,3 +8,19 @@ It relies on the [OpenAI Python library](https://github.com/openai/openai-python
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Copy `.env.example` to `.env` and fill in API keys.
+4. Run the app:
+   ```bash
+   make run -- --model best_reasoning
+   ```
+
+## Tests
+Run unit tests with:
+```bash
+make test
+```
