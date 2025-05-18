@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional  # currently unused but left for future expansion
 
 import requests
 
@@ -9,8 +9,8 @@ class LimitlessClient:
     """Client for the hypothetical Limitless GraphQL API."""
 
     def __init__(self) -> None:
-        self.token = get_env("LIMITLESS_API_TOKEN")
-        self.base_url = "https://api.limitless.com"
+        self.token: str = get_env("LIMITLESS_API_TOKEN")
+        self.base_url: str = "https://api.limitless.com"
 
     def get_transcript(self, date: str) -> str:
         """Return the transcript for ``date``.
@@ -19,5 +19,5 @@ class LimitlessClient:
         real API call using ``requests`` when credentials are available.
         """
         # TODO: implement real API call
-        _ = date
+        _ = date  # placeholder to silence linters until implemented
         return ""
