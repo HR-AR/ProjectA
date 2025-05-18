@@ -1,0 +1,9 @@
+openai
+streamlit
+python-dotenv
+notion-client
+todoist-api-python
+tiktoken
+requests
+tenacity
+pytest
